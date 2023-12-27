@@ -21,7 +21,7 @@ import lombok.ToString;
 public class Memo {
 
 	@Id // PK 표시
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // enum.. static int 같은 것
 	int no; // -> pk "auto increment"
 
 	@Column(length = 200, nullable = true) // false 몀ㄴ 빈값x

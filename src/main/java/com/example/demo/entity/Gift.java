@@ -8,22 +8,33 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
-@Entity // 엔티티로 선언 jpa가 관리하는 객체다. 표시
-@Table(name = "tbl_memo") // 실제 DB의 table 이름
+@Entity
+@Table(name = "tbl_gift")
 
+@Getter
+@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Memo {
+public class Gift {
 
-	@Id // PK 표시
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // enum.. static int 같은 것
-	int no; // -> pk "auto increment"
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int giftNo;
 
-	@Column(length = 200, nullable = true) // false 면 빈값x
-	String text;
+	@Column(length = 20)
+	String name;
+
+	@Column(length = 11, nullable = true)
+	int price;
+
+	@Column(length = 20)
+	String type;
+
 }

@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -18,9 +18,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@EntityListeners(AuditingEntityListener.class)
 @Entity
 @Table(name = "tbl_member")
-@EntityListeners(AuditingEntityListener.class)
+
 
 @Getter
 @Setter
@@ -34,14 +35,14 @@ public class Member {
 	@Id
 	String userId;
 	
-	@Column(length = 255)
+	@Column
 	String grade;
 	
-	@Column(length = 255)
+	@Column
 	String password;
 	
 	@CreatedDate
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	LocalDateTime createDate;
+	LocalDate registerDate;
 	
 }

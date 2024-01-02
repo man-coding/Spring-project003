@@ -56,7 +56,7 @@ public class MemoRepositoryTest1_2 {
 	@Test
 	void 정렬조건추가하기() {
 
-		// no 필드를 기준으로 역정렬하는 족너을 생성
+		// no 필드를 기준으로 역정렬하는 조건을 생성
 		Sort sort = Sort.by("no").descending();
 
 		// 페이지번호, 데이터개수, 정렬조건을 담아서 페이지 정보 생성

@@ -36,6 +36,5 @@ public class OrderRepositoryTest1_2 {
 //		for (int i = 0; i < list.size(); i++) {  //짝수를 구하거나 홀수를 구하거나 선별할 때는 일반포문 써야 함.
 //			Order order = list.get(i);
 //			System.out.println(order);
-		}
 	}
 }
